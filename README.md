@@ -8,7 +8,7 @@ Our procedure is as follows:
   
 * **Dimensionality reduction** : _Multidimensional Scaling_ (MDS)  makes it possible to project these _n_ elements into a lower-dimensional space, while preserving the initial similarity relationships as far as possible. More specifically, it involves minimising a cost function called _Stress_, which measures the difference between the initial similarities and the distances in the projected space. The quality of a spatial representation obtained by an MDS can be visualised in a graph called a Shepard diagram.
 
-* We also apply hierarchical clustering, which provides a further visualization of the order in which the distance measurements come from.
+* In the python code, we also apply hierarchical clustering, which provides a further visualization of the order in which the distance measurements come from.
 
 The pyton codes presented will be used to construct similarity spaces, such as the one below, obtained with Gemini-1.5-Pro :
 
