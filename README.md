@@ -2,7 +2,7 @@ This project is inspired by the theory of conceptual spaces, and specifically by
 
 Our procedure is as follows:
 
-* **Data collection** Before constructing a similarity space, it is first necessary to obtain data on the similarity of the 𝑛 elements to be represented in it. LLM can be asked to estimate the similarity between all possible pairs with these 𝑛 elements.
+* **Data collection** Before constructing a similarity space, it is first necessary to obtain data on the similarity of the 𝑛 elements to be represented in it. A large language model (LLM) can be asked to estimate the similarity between all possible pairs with these 𝑛 elements.
 
 * **Data formatting** The data is arranged in a _similarity matrix_ . This matrix reflects the similarity judgements between these elements: each cell (𝑖,𝑗) of the matrix contains the similarity of 𝑖 with 𝑗.
   
