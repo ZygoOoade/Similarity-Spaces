@@ -1,6 +1,6 @@
 This project is inspired by the theory of conceptual spaces, and specifically by [Douven et al. (2023)](https://doi.org/10.3389/fpsyg.2023.1234483) .
 
-# Procedure :
+# Procedure
 
 ## Data Collection
 Before constructing a similarity space, it is first necessary to obtain data on the similarity of the 𝑛 elements to be represented in it. A large language model (LLM) can be asked to estimate the similarity between all possible pairs with these 𝑛 elements.
