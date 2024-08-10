@@ -14,9 +14,9 @@ Here, the LLM prompt explicitly asks for a similarity value set between 0 and 10
 Thus, in total, $`\left(\begin{matrix}n\\2\end{matrix}\right) = \frac{n(n-1)}{2}`$ different similarity judgment requests are sent serially to the LLM via an API. 
 
 ### Data formatting
-We arrange these data in a $n \times n$ _similarity matrix_ . This matrix reflects the similarity judgements between these elements: each cell (𝑖,𝑗) of the matrix contains the similarity of 𝑖 with 𝑗.
+We arrange these data in a $n \times n$ _similarity matrix_ . This matrix reflects the similarity judgements between these elements: each cell $`(i,j)`$ of the matrix contains the similarity of 𝑖 with 𝑗.
 Following the identity constraint, for any integer _i_ up to _n_, all cells _(i,i)_ of the matrix will be equal to 100. 
-Following the symmetry constraint, (j,i)=(i,j) for all i and j, and it's a symmetric matrix.
+Following the symmetry constraint, $`(j,i)=(i,j)`$ for all i and j, and it's a symmetric matrix.
 Since there are $`n^2`$ cells in all, the _n_ diagonal elements have been set to 100, and we only need to calculate half of the remaining values, we find $`\frac{n^2 - n}{2} = \frac{n(n-1)}{2}`$
 
   
