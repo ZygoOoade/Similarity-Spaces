@@ -9,7 +9,7 @@ Here, the LLM prompt explicitly asks for a similarity value set between 0 and 10
     $$∀i \quad Similarity(i,i)=100 $$
     
   * **Symetry** For any pair of distinct elements _i_ and _j_, the similarity of _i_ with _j_ is equal to the similarity of _j_ with _i_.
-     $$i.e. \quad ∀i,j \quad Similarity(i,j) = Similarity(i,j)$$.
+     $$i.e. \quad ∀i,j \quad Similarity(i,j) = Similarity(j,i)$$.
 
 Thus, in total, $`\left(\begin{matrix}n\\2\end{matrix}\right) = \frac{n(n-1)}{2}`$ different similarity judgment requests are sent serially to the LLM via an API. 
 
@@ -18,8 +18,6 @@ We arrange these data in a $n \times n$ _similarity matrix_ . This matrix reflec
 Following the identity constraint, for any integer _i_ up to _n_, all cells _(i,i)_ of the matrix will be equal to 100. 
 Following the symmetry constraint, (j,i)=(i,j) for all i and j, and it's a symmetric matrix.
 Since there are $`n^2`$ cells in all, the _n_ diagonal elements have been set to 100, and we only need to calculate half of the remaining values, we find $`\frac{n^2 - n}{2} = \frac{n(n-1)}{2}`$
-
-
 
   
 ## Dimensionality reduction
@@ -31,6 +29,14 @@ dissimilarity_matrix = 1 - (similarity_matrix / 100)
 ```
 
 From the previous properties it is clear that this dissimilarity matrix is also symmetrical and that all its diagonal elements are 0.
+
+We apply a multidimensional scaling on this dissimilarity matrix with :
+```
+mds = MDS(n_components=2, dissimilarity='precomputed', random_state=42)
+coordinates = mds.fit_transform(dissimilarity_matrix)
+```
+
+
 
 
 The pyton codes presented will be used to construct similarity spaces, such as the one below, obtained with Gemini-1.5-Pro :
