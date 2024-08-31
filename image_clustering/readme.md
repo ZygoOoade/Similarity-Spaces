@@ -46,7 +46,7 @@ if __name__ == "__main__":
 	# If the value is greater than the number of images present  in the "data_path" folder, it will use all the images and change the value of this variable to the number of images available in the "data_path" folder. 
 
 	use_imagenets = False
-	# choose from: "Xception", "VGG16", "VGG19", "ResNet50", "InceptionV3", "InceptionResNetV2", "DenseNet", "MobileNetV2" and "False" -> Default is: False
+	# choose from: "VGG16", "VGG19" and "False" -> Default is: False
 	# you have to use the correct spelling! (case of the letters are irrelevant as the lower() function has been used)
 
 	if use_imagenets == False:
