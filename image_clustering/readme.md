@@ -22,7 +22,7 @@ from tensorflow.keras.applications import VGG19,VGG16
 		print("\n " + str(self.max_examples) + " images from the \"" + self.folder_path + "\" folder have been loaded in a random order.")
 ```
 
-Paramétrer le clustering :
+### Paramétrer le clustering :
 
 ```
 	def clustering(self):
